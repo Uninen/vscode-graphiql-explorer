@@ -25,3 +25,5 @@ yarn-error.log*
 .merlin
 lib
 .bsb.lock
+.python-version
+.vscode/settings.json
