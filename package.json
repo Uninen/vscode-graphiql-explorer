@@ -96,6 +96,7 @@
     ]
   },
   "dependencies": {
+    "fsevents": "^2.1.2",
     "graphiql": "^0.17.5",
     "graphiql-explorer": "0.4.6",
     "graphql": "^14.5.8",

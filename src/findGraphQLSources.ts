@@ -38,7 +38,7 @@ export let makeExtractTagsFromSource = (
 };
 
 export const jsGraphQLTagsRegexp = new RegExp(
-  /(?<=(graphql|gql|graphql\.experimental)`)[.\s\S]+?(?=`)/g
+  /(?<=(graphql|gql|page-query|static-query|graphql\.experimental)`)[.\s\S]+?(?=`)/g
 );
 export const reasonFileFilterRegexp = new RegExp(/(\[%(graphql|relay\.))/g);
 export const reasonGraphQLTagsRegexp = new RegExp(

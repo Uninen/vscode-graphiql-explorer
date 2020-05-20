@@ -44,6 +44,23 @@ export const SomeComponent: React.SFC<Props> = (props) => {
 
     return <div>{queryResult.status}</div<;
 };
+
+<static-query>
+query {
+  metadata {
+    siteName
+  }
+}
+</static-query>
+
+<page-query>
+query Post ($id: ID!) {
+  post: post (id: $id) {
+    title
+    content
+  }
+}
+</page-query>
 `;
 
     const expectedResult = [
@@ -69,6 +86,18 @@ export const SomeComponent: React.SFC<Props> = (props) => {
     `,
         start: { character: 51, line: 16 },
         end: { character: 4, line: 22 },
+        type: "TAG"
+      }
+      {
+        content: `
+query {
+  metadata {
+    siteName
+  }
+}
+`,
+        start: { character: 0, line: 28 },
+        end: { character: 0, line: 33 },
         type: "TAG"
       }
     ];
